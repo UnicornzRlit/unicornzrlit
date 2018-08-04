@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>TheCatSaysMoo</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+    <style>
+        .animalPic:hover{
+            cursor:pointer;
+            background-color: darkpink;
+            
+        }   
+    </style>
+    
+    
+<body>
+
+<h1>What Does The Cat and Dog Say?</h1>
+<p>Click the cat and dog down below to see what they say!</p>
+    <div>
+        
+    <img class="animalPic" id="Cat" src="https://media.giphy.com/media/26FPCXdkvDbKBbgOI/giphy.gif" width = "80%">
+       <img class="animalPic" id="Puppy" src="https://media.giphy.com/media/3o6ZtaO9BZHcOjmErm/giphy.gif" width = "80%">
+     
+       
+    </div>
+</body>
+    
+        <script>
+   var animal = document.getElementById('Cat');
+    
+        
+    animal.onclick = function() {
+        
+        var animalSounds = [
+        'Moo','Quack','Woof','Oink','Neigh','Roar','Baa','Tweet'
+        ];
+        var beginningOfPhrase = 'The Cat Says ';
+        var sound;
+        var randomIndex = Math.floor(Math.random()*animalSounds.length)
+        sound = animalSounds[randomIndex]
+        
+        alert(beginningOfPhrase+sound);
+    };
+            var animal = document.getElementById('Puppy');
+    
+        
+    animal.onclick = function() {
+        
+        var animalSounds = [
+        'Moo','Quack','Meow','Oink','Neigh','Roar','Baa','Tweet'
+        ];
+        var beginningOfPhrase = 'The Dog Says ';
+        var sound;
+        var randomIndex = Math.floor(Math.random()*animalSounds.length)
+        sound = animalSounds[randomIndex]
+        
+        alert(beginningOfPhrase+sound);
+    };
+    </script>
+</html>
